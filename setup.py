@@ -27,6 +27,7 @@ setup(
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: Implementation :: CPython',
     ],
     description="DocSwitch gives you the freedom to write your Python documentation in any format you want, switching between them effortlessly.",
     entry_points={
@@ -37,6 +38,7 @@ setup(
     install_requires=requirements,
     license="MIT license",
     long_description=readme + '\n\n' + history,
+    long_description_content_type='text/markdown',
     include_package_data=True,
     keywords='doc_switch',
     name='doc_switch',
