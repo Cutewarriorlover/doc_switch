@@ -4,11 +4,12 @@ import click
 
 
 @click.command()
-def main(args=None):
+@click.argument("files", type=click.Path(exists=True), nargs=-1)
+def main(files):
     """Console script for doc_switch."""
-    click.echo("Replace this message by putting your code into "
-               "doc_switch.cli.main")
-    click.echo("See click documentation at https://click.palletsprojects.com/")
+    for file in files:
+        with open(file) as f:
+            print(f.read())
     return 0
 
 
